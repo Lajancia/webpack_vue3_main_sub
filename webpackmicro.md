@@ -28,7 +28,7 @@
 
 ![webpack](https://media.vlpt.us/images/eye3570/post/a8aa94b2-c3e2-4cb4-8754-bbf4c5fb79c1/webpack.png)
 
-**_webpack 오픈소스 자바스크립트 모듈 번들러이다._**
+**_webpack은 오픈소스 자바스크립트 모듈 번들러이다._**
 
 자바스크립트에서 모듈이란 js로 이루어진 작은 기능단위 코드를 지칭한다. 하지만 webpack은 js 모듈 뿐만 아니라 스타일시트, 이미지 등 모든 것을 자바스크립트 모듈로 로딩해서 사용한다.
 
