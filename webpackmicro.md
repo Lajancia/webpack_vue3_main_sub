@@ -82,8 +82,8 @@
 ## **Module Federation 사용 예제**
 
 예제 코드 참고: https://github.com/Lajancia/webpack_vue
+![main_sub](https://user-images.githubusercontent.com/50996139/117684315-d728af80-b1ef-11eb-8e32-bf4286b72cd8.jpg)
 
-![layout_page](https://user-images.githubusercontent.com/50996139/117148575-4fa6ff00-adf1-11eb-9d0d-8bbdcabecd94.jpg)
 
 ### **수행순서**
 
@@ -96,7 +96,8 @@
 
 ### **이미지 가이드**
 
-![webpack_file](https://user-images.githubusercontent.com/50996139/117148550-47e75a80-adf1-11eb-9401-d1b42b2e3557.jpg)
+![webpack_image_guide](https://user-images.githubusercontent.com/50996139/117684362-e27bdb00-b1ef-11eb-93fe-0f2ab7da4ced.jpg)
+
 
 </br>
 
