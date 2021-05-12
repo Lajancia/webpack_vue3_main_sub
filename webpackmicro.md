@@ -20,7 +20,7 @@
 - 기존의 단일화된 코드에서 분할된 어플리케이션의 간소화된 코드가 팀에 합류하는 개발자들의 접근성을 낮추는 것에 기여한다.
   </br>
 
-**이러한 Micro frontend 아키텍쳐를 구현하기 위해 Webpack에서 제공하는 Module Federation을 이용헌다.**
+**이러한 Micro frontend 아키텍쳐를 구현하기 위해 Webpack에서 제공하는 Module Federation을 이용한다.**
 
 </br>
 
@@ -32,7 +32,7 @@
 
 자바스크립트에서 모듈이란 js로 이루어진 작은 기능단위 코드를 지칭한다. 하지만 webpack은 js 모듈 뿐만 아니라 스타일시트, 이미지 등 모든 것을 자바스크립트 모듈로 로딩해서 사용한다.
 
-이러한 웹팩에서 지원하는 Webpack plugin 중 하나인 Module Federation은 Micro Frontend 프레임워크를 구현하는 것에 도움을 준다.
+이러한 웹팩에서 지원하는 Webpack plugin 중 하나인 `Module Federation`은 Micro Frontend 프레임워크를 구현하는 것에 도움을 준다.
 
 </br>
 
@@ -84,7 +84,6 @@
 예제 코드 참고: https://github.com/Lajancia/webpack_vue
 ![main_sub](https://user-images.githubusercontent.com/50996139/117684315-d728af80-b1ef-11eb-8e32-bf4286b72cd8.jpg)
 
-
 ### **수행순서**
 
 1. main에서 나타나게 할 sub1과 sub2를 각각의 웹팩에서 ModuleFederationPlugin 내부에 expose로 등록한다. 이때 sub1은 3002번 포트, sub2는 3003번 포트로 지정한다.
@@ -97,7 +96,6 @@
 ### **이미지 가이드**
 
 ![webpack_image_guide](https://user-images.githubusercontent.com/50996139/117684362-e27bdb00-b1ef-11eb-93fe-0f2ab7da4ced.jpg)
-
 
 </br>
 
@@ -235,6 +233,8 @@ const button = {
 };
 export default button;
 ```
+
+</br>
 
 - html 화면에 버튼을 생성하는 코드이다. 버튼에는 "Hello World" 문구가 함께 출력되어 나타난다.
 
