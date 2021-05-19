@@ -519,12 +519,13 @@ export default {};
 ## **Module-Federation을 활용한 댓글 Application 컴포넌트 이용**
 
 ### **실행 이미지**
-![comment component 사용](https://user-images.githubusercontent.com/50996139/118784733-37dc7a00-b8cb-11eb-9f24-6b14d43d4294.jpg)
+![실행 화면](https://user-images.githubusercontent.com/50996139/118832531-ac2f1180-b8fb-11eb-80f2-a9c93b582ca9.jpg)
+
 
 <br/>
 
 ### **수행순서**
-![파일 ](https://user-images.githubusercontent.com/50996139/118784847-4fb3fe00-b8cb-11eb-97f6-eab69a55001c.jpg)
+![파일 구조](https://user-images.githubusercontent.com/50996139/118784847-4fb3fe00-b8cb-11eb-97f6-eab69a55001c.jpg)
 
 
 1. main의 App.vue에서 사용할 댓글 컴포넌트를 comment의 webpack.config.js의 ModuleFederationPlugin 내부에 expose로 등록한다.
