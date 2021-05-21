@@ -84,7 +84,7 @@
 
 </br>
 
-## **Module Federation 예제 코드 분석**
+## **Module Federation 예제(실습 코드 분석) - A**
 
 예제 코드 참고: [webpack_vue3_main_sub](https://github.com/Lajancia/webpack_vue3_main_sub)
 ![main_sub](https://user-images.githubusercontent.com/50996139/117684315-d728af80-b1ef-11eb-8e32-bf4286b72cd8.jpg)
@@ -516,17 +516,17 @@ export default {};
 
 </br>
 
-## **Module-Federation을 활용한 댓글 Application 컴포넌트 이용**
+## **Module Federation 예제(댓글 애플리케이션) - B**
 
 ### **실행 이미지**
-![실행 화면](https://user-images.githubusercontent.com/50996139/118832531-ac2f1180-b8fb-11eb-80f2-a9c93b582ca9.jpg)
 
+![실행 화면](https://user-images.githubusercontent.com/50996139/118832531-ac2f1180-b8fb-11eb-80f2-a9c93b582ca9.jpg)
 
 <br/>
 
 ### **수행순서**
-![파일 구조](https://user-images.githubusercontent.com/50996139/118784847-4fb3fe00-b8cb-11eb-97f6-eab69a55001c.jpg)
 
+![파일 ](https://user-images.githubusercontent.com/50996139/118784847-4fb3fe00-b8cb-11eb-97f6-eab69a55001c.jpg)
 
 1. main의 App.vue에서 사용할 댓글 컴포넌트를 comment의 webpack.config.js의 ModuleFederationPlugin 내부에 expose로 등록한다.
 2. comment의 webpack.config.js에 등록된 컴포넌트를 main에서 이용하기 위해, ModuleFederationPlugin 내부의 remotes에 해당 컴포넌트의 호스트를 등록한다.
@@ -726,7 +726,7 @@ yarn add -D tailwindcss@yarn:@tailwindcss/postcss7-compat postcss@^7 autoprefixe
 
 <br/>
 
-**2. src>components>comments>index.vue**
+**2. src>components>comments>comment.vue**
 
 - 댓글 기능을 수행할 vue 코드 작성한다.
 
@@ -743,7 +743,7 @@ yarn add -D tailwindcss@yarn:@tailwindcss/postcss7-compat postcss@^7 autoprefixe
 </template>
 
 <script>
-  import Comment from "./components/comments/index.vue";
+  import Comment from "./components/comments/comment.vue";
 
   export default {
     name: "App",
@@ -798,7 +798,7 @@ plugins: [
 
 
       },
-      exposes: { "./Comment": "./src/components/comments/index.vue",},
+      exposes: { "./Comment": "./src/components/comments/comment.vue",},
        shared: require("./package.json").dependencies,
     }),
     new HtmlWebpackPlugin({
@@ -940,7 +940,7 @@ resolve: {
    > 위의 모듈을 추가로 설치하면 정상적으로 동작한다.
 
 3. Markdown 파일을 불러왔을 경우, 제대로 서버가 동작하지 않는 문제가 발생
-   > 뷰에서 마크다운을 읽어낼 경우, 마크다운에 작성된 코드들을 형식에 맞게 읽어내지 못하는 문제가 발생한다. 따라서 코드의 형식(javascript, html 등)을 삭제하고 ` `만을 사용하여 코드를 묶어주면 해결된다.
+   > 뷰에서 마크다운을 읽어낼 경우, 마크다운에 작성된 코드들을 형식에 맞게 읽어내지 못하는 문제가 발생한다. 따라서 코드의 형식(javascript, html 등)을 삭제하고 \``` ```만을 사용하여 코드를 묶어주면 해결된다.
 
 <br/>
 
