@@ -4,26 +4,35 @@
 
 > 실습 진행: 한국외국어대학교 - 황수민, 정주현, 남기훈, 김준성
 
-</br>
+<br/>
+
+## **전통적인 방식의 Monolith Frontend**
+
+![monolith Frontends](https://miro.medium.com/max/4490/1*OsJaM_yGjPHSZu9Y0KCBNQ.png)
+
+**`monolith frontend`은 사용자 인터페이스와 데이터 엑세스 코드가 단일 플랫폼에서 단일 프로그램으로 결합되는 단일 계층 소프트웨어 응용 프로그램을 말한다.**
+
+이는 개발자로 하여금 독립적인 개발 진행을 어렵게 하고, 부분적인 기능 개선과 업데이트에 많은 시간이 걸린다는 단점이 있다. 이러한 문제를 해결하고자 `Micro-frontend 아케텍쳐`가 등장하였다.
+
+<br/>
 
 ## **Micro-Frontend란?**
-
-</br>
 
 ![micro-frontend](https://martinfowler.com/articles/micro-frontends/horizontal.png)
 
 **마이크로 프론트엔드는 제품을 더 작고 단순한 어플리케이션의 단위로 분할을 통해 독립적이고 자율적인 팀 개발 환경을 제공하는 하나의 접근 방식이다.**
 
-</br>
+<br/>
 
 ### **마이크로 프론트엔드 아키텍쳐에는 다음과 같은 특징을 가진다**
 
-- Micro-frontend 아키텍쳐는 사용하기 간단하고, 비교적 관리하기가 쉽다.</br>
+- Micro-frontend 아키텍쳐는 사용하기 간단하고, 비교적 관리하기가 쉽다.
 - 독립적인 개발팀이 훨씬 쉽게 프론트 엔드 어플리케이션을 공동으로 작업하기 용이하다.
 - 하나의 코드를 여러 곳에서 재사용이 가능하다.
 - 각각의 컴포넌트에 서로 다른 기술(JavaScript, React, Vue, Angular 등)을 사용 가능하다.
 - 기존의 단일화된 코드에서 분할된 어플리케이션의 간소화된 코드가 팀에 합류하는 개발자들의 접근성을 낮추는 것에 기여한다.
-  </br>
+
+</br>
 
 **이러한 Micro frontend 아키텍쳐를 구현하기 위해 Webpack에서 제공하는 Module Federation을 이용한다.**
 
@@ -512,11 +521,15 @@ export default {};
 ```
 
 - 외부에서 가져온 컴포넌트가 동작할 위치에 main.js에서 등록한 이름을 이용하여 태그로 나타낸다.
-- 태그가 위치한 장소에 각각의 컴포넌트가 나타난다.
+- 태그가 위치한 장소에 각각의 컴ㄴ포넌트가 나타난다.
 
 </br>
 
 ## **Module Federation 예제(댓글 애플리케이션) - B**
+
+깃허브 주소: https://github.com/Lajancia/webpack_vue3_comment
+
+<br/>
 
 ### **실행 이미지**
 
@@ -718,6 +731,10 @@ yarn add -D tailwindcss@yarn:@tailwindcss/postcss7-compat postcss@^7 autoprefixe
 
 <br/>
 
+---
+
+<br/>
+
 ### **프로젝트 구현을 위한 구성 - comment**
 
 **1. src>db>db.json**
@@ -811,6 +828,10 @@ plugins: [
 
 - comment에서 컴포넌트로 외부에서 사용할 수 있도록 exposes에 index.vue 파일을 등록한다.
 - 이후에 이 컴포넌트를 외부에서 호출할 경우, comment/Comment로 호출할 수 있다.
+
+<br/>
+
+---
 
 <br/>
 
@@ -910,7 +931,8 @@ resolve: {
 
 2. vue2를 이용할 시, module을 찾을 수 없는 error가 발생
 
-   > vue2의 main.js 파일에서 `import Vue from "vue"`를 이용하는지 확인하고, 이용하고 있다면, `import { createApp } from "vue";` 혹은 `import { createApp, defineAsyncComponent } from "vue";`의 형태로 변경해주도록 한다.
+   > vue2의 main.js 파일에서 `import Vue from "vue"`를 이용하는지 확인하고, 이용하고 있다면 <p>`import { createApp } from "vue";`</p>
+   > 혹은 <p> `import { createApp, defineAsyncComponent } from "vue";`</p>의 형태로 변경해주도록 한다.
 
 3. css를 html 내부가 아닌 외부에서 선언할 경우, 불러온 컴포넌트에 색깔이 반영되지 않음
    > 추가적인 loader 설치가 필요한지 확인해볼 필요가 있다.
