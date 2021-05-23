@@ -538,8 +538,8 @@ export default {};
 <br/>
 
 ### **수행순서**
+![](https://user-images.githubusercontent.com/50996139/119253571-d67b1a80-bbec-11eb-8162-fa0fb9e2f4bd.jpg)
 
-![파일 ](https://user-images.githubusercontent.com/50996139/118784847-4fb3fe00-b8cb-11eb-97f6-eab69a55001c.jpg)
 
 1. main의 App.vue에서 사용할 댓글 컴포넌트를 comment의 webpack.config.js의 ModuleFederationPlugin 내부에 expose로 등록한다.
 2. comment의 webpack.config.js에 등록된 컴포넌트를 main에서 이용하기 위해, ModuleFederationPlugin 내부의 remotes에 해당 컴포넌트의 호스트를 등록한다.
