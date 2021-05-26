@@ -6,13 +6,13 @@
 
 <br/>
 
-## **전통적인 방식의 Monolith Frontend**
+## **기존의 Monolithic Frontend의 불편함**
 
-![monolith Frontends](https://miro.medium.com/max/4490/1*OsJaM_yGjPHSZu9Y0KCBNQ.png)
+![monolithic Frontends](https://thatcoder.space/content/images/2019/11/2015-08-24-microservices-monolith.png)
 
-**`monolith frontend`은 사용자 인터페이스와 데이터 엑세스 코드가 단일 플랫폼에서 단일 프로그램으로 결합되는 단일 계층 소프트웨어 응용 프로그램을 말한다.**
+**`monolithic frontend`은 사용자 인터페이스와 데이터 엑세스 코드가 단일 플랫폼에서 단일 프로그램으로 결합되는 단일 계층 소프트웨어 응용 프로그램을 말한다.** 이는 개발자로 하여금 독립적인 개발 진행을 어렵게 하고, 부분적인 기능 개선과 업데이트에 많은 시간이 걸린다는 단점이 있다.
 
-이는 개발자로 하여금 독립적인 개발 진행을 어렵게 하고, 부분적인 기능 개선과 업데이트에 많은 시간이 걸린다는 단점이 있다. 이러한 문제를 해결하고자 `Micro-frontend 아케텍쳐`가 등장하였다.
+이러한 문제를 해결하고자 `Micro-frontend 아케텍쳐`가 등장하였다.
 
 <br/>
 
@@ -525,6 +525,10 @@ export default {};
 
 </br>
 
+---
+
+<br/>
+
 ## **Module Federation 예제(댓글 애플리케이션) - B**
 
 깃허브 주소: https://github.com/Lajancia/webpack_vue3_comment
@@ -538,8 +542,8 @@ export default {};
 <br/>
 
 ### **수행순서**
-![](https://user-images.githubusercontent.com/50996139/119253571-d67b1a80-bbec-11eb-8162-fa0fb9e2f4bd.jpg)
 
+![파일 ](https://user-images.githubusercontent.com/50996139/119253571-d67b1a80-bbec-11eb-8162-fa0fb9e2f4bd.jpg)
 
 1. main의 App.vue에서 사용할 댓글 컴포넌트를 comment의 webpack.config.js의 ModuleFederationPlugin 내부에 expose로 등록한다.
 2. comment의 webpack.config.js에 등록된 컴포넌트를 main에서 이용하기 위해, ModuleFederationPlugin 내부의 remotes에 해당 컴포넌트의 호스트를 등록한다.
@@ -731,10 +735,6 @@ yarn add -D tailwindcss@yarn:@tailwindcss/postcss7-compat postcss@^7 autoprefixe
 
 <br/>
 
----
-
-<br/>
-
 ### **프로젝트 구현을 위한 구성 - comment**
 
 **1. src>db>db.json**
@@ -828,10 +828,6 @@ plugins: [
 
 - comment에서 컴포넌트로 외부에서 사용할 수 있도록 exposes에 index.vue 파일을 등록한다.
 - 이후에 이 컴포넌트를 외부에서 호출할 경우, comment/Comment로 호출할 수 있다.
-
-<br/>
-
----
 
 <br/>
 
@@ -955,7 +951,7 @@ resolve: {
 
    - yarn add json-server
 
-   - yarn add-tailwindcss
+   - yarn add tailwindcss
 
    - yarn add -D tailwindcss@yarn:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
 
