@@ -6,7 +6,7 @@
 
 <br/>
 
-## **기존의 Monolithic Frontend의 불편함**
+## **기존 Monolithic Frontend의 불편함**
 
 ![monolithic Frontends](https://thatcoder.space/content/images/2019/11/2015-08-24-microservices-monolith.png)
 
